@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\franc\\OneDrive\\Documents\\Catalog2\\Catalog2.csproj": {}
+    "C:\\Catalog2\\Catalog2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\franc\\OneDrive\\Documents\\Catalog2\\Catalog2.csproj": {
+    "C:\\Catalog2\\Catalog2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\franc\\OneDrive\\Documents\\Catalog2\\Catalog2.csproj",
+        "projectUniqueName": "C:\\Catalog2\\Catalog2.csproj",
         "projectName": "Catalog2",
-        "projectPath": "C:\\Users\\franc\\OneDrive\\Documents\\Catalog2\\Catalog2.csproj",
+        "projectPath": "C:\\Catalog2\\Catalog2.csproj",
         "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\franc\\OneDrive\\Documents\\Catalog2\\obj\\",
+        "outputPath": "C:\\Catalog2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",

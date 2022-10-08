@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nSgIHPFbegqUYaqullB+Ud4SjdVEeVkvST3/xBs5EwAwsqargotjSP4TQi1n+11hjr59WfsXTtPdmeMyTCN9Qw==",
+  "dgSpecHash": "7+8pOBmZ5YCZK+yPwg2paPOr6OlbjM33EPIZeiTDb+jmJcVbJL9EMQM9g38QKyjpzM+67njGuqXFwHyBH4CsOw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\franc\\OneDrive\\Documents\\Catalog2\\Catalog2.csproj",
+  "projectFilePath": "C:\\Catalog2\\Catalog2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\franc\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\franc\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
