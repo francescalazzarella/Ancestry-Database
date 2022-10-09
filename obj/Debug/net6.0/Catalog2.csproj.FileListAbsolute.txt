@@ -68,3 +68,6 @@ C:\Catalog2\bin\Debug\net6.0\runtimes\win\native\snappy64.dll
 C:\Catalog2\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
 C:\Catalog2\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Catalog2\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
+C:\Catalog2\bin\Debug\net6.0\HealthChecks.MongoDb.dll
+C:\Catalog2\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+C:\Catalog2\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll

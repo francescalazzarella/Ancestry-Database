@@ -4,6 +4,9 @@ using Catalog2.Settings;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Bson;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using System.Net.Mime;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,11 +23,16 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IItemsRepository, MongoDbItemsRepository>();
 BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
 BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
+var mongoDbSettings = builder.Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
+
+
 builder.Services.AddSingleton<IMongoClient>(ServiceProvider =>
 {
-    var settings = builder.Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
-    return new MongoClient(settings.ConnectionString);
+    
+    return new MongoClient(mongoDbSettings.ConnectionString);
 });
+
+builder.Services.AddHealthChecks().AddMongoDb(mongoDbSettings.ConnectionString, name: "mongodb", timeout: TimeSpan.FromSeconds(5), tags: new[] {"ready"});
 
 var app = builder.Build();
 
@@ -40,5 +48,33 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHealthChecks("/health/ready", new HealthCheckOptions
+{
+    Predicate = (check)=> check.Tags.Contains("ready"),
+    ResponseWriter = async(context, report) =>
+{
+        var result = JsonSerializer.Serialize(
+            new {
+                status = report.Status.ToString(),
+                checks = report.Entries.Select(entry => new 
+                {
+                    name = entry.Key,
+                    status = entry.Value.Status.ToString(),
+                    exception = entry.Value.Exception != null ? entry.Value.Exception.Message: "none",
+                    duration = entry.Value.Duration.ToString()
+                    })
+                }
+);
+    context.Response.ContentType = MediaTypeNames.Application.Json;
+    await context.Response.WriteAsync(result);
+}
+});
+
+
+app.MapHealthChecks("/health/live", new HealthCheckOptions{
+    Predicate = (_) => false
+});
+
 
 app.Run();
