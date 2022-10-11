@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Catalog2.csproj",
+                "${workspaceFolder}/build.proj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -23,7 +23,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Catalog2.csproj",
+                "${workspaceFolder}/Catalog2.Api/Catalog2.Api.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -37,7 +37,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Catalog2.csproj"
+                "${workspaceFolder}/Catalog2.Api/Catalog2.Api.csproj"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -50,12 +50,12 @@
             "dockerBuild": {
                 "tag": "catalog2:dev",
                 "target": "base",
-                "dockerfile": "${workspaceFolder}/Dockerfile",
-                "context": "${workspaceFolder}",
+                "dockerfile": "${workspaceFolder}/Catalog2.Api/Dockerfile",
+                "context": "${workspaceFolder}/Catalog2.Api/",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/Catalog2.csproj"
+                "appProject": "${workspaceFolder}/Catalog2.Api/Catalog2.Api.csproj"
             }
         },
         {
@@ -66,12 +66,12 @@
             ],
             "dockerBuild": {
                 "tag": "catalog2:latest",
-                "dockerfile": "${workspaceFolder}/Dockerfile",
-                "context": "${workspaceFolder}",
+                "dockerfile": "${workspaceFolder}/Catalog2.Api/Dockerfile",
+                "context": "${workspaceFolder}/Catalog2.Api/",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/Catalog2.csproj"
+                "appProject": "${workspaceFolder}/Catalog2.Api.csproj"
             }
         },
         {
@@ -82,7 +82,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/Catalog2.csproj",
+                "appProject": "${workspaceFolder}/Catalog2.Api/Catalog2.Api.csproj",
                 "enableDebugging": true,
                 "configureSsl": false
             }
@@ -95,7 +95,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/Catalog2.csproj"
+                "appProject": "${workspaceFolder}/Catalog2.Api/Catalog2.Api.csproj"
             }
         }
     ]
