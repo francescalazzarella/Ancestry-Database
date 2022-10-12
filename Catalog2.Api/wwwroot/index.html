@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ancestry Database</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+    <div id ="navbar" class="navbar">
+    <style>.navbar{
+        width: 100%;
+        font-family: Century;
+        font-weight: bold;
+        background-color: rgba(160, 95, 11, 0.616);
+        padding: 15px;
+        float: inline-end;
+      }
+      </style>
+    <a class="active" href="home"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="items"><i class="fa fa-fw fa-profiles"></i> All Profiles</a>
+    <a href="#"><i class="fa fa-fw fa-search"></i> Search Profiles</a>
+    </div>
+<body>
+    <h1>Ancestry Database <img src="https://th.bing.com/th/id/R.f8815fcaf79acabb497835fe835d7624?rik=%2fXkAtBDLLz0joQ&pid=ImgRaw&r=0" width="40px" height="auto"></h1>
+<div class="slideshow-container fade">
+
+    <div class="Containers">
+      <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/277356646_387875450006794_4640110630008392245_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=zfIlSsWIMUgAX-9r6Dx&_nc_ht=scontent-ord5-1.xx&oh=00_AT-Viw45YFdl4_WZOqqCtsHTOY_TKGKeJLBbbTYAqQJoRw&oe=634BED22" width="500px" height="auto">
+    </div>
+    <div class="Containers">
+      <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t1.6435-9/36352718_1995044037232485_1041754732940492800_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=nP2sLhRCg_IAX8CvAK9&_nc_ht=scontent-ord5-1.xx&oh=00_AT-2K_WIbnRE9L_lcFvyqqhAzk_MaGkYDH_lsfAhUa3h2A&oe=636C5A6E" width="500px" height="auto">
+    </div>
+    <div class="Containers">
+      <img src="https://th.bing.com/th/id/OIP.mCHkFn6uBmUEiKfLAv_-3QHaFD?pid=ImgDet&rs=1" width="500px" height="auto">
+    </div>
+</div>
+    
+    <h3>Add Ancestor Profile</h3> 
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+        <input type="text" id="add-name" placeholder="First and Last Name">
+        <input type="text" id="add-dob" placeholder="Birth Date">
+        <input type="text" id="add-birthplace" placeholder="Birth Place"> 
+        <input type="text" id="add-birthannotation" placeholder="Source"> 
+        <br>
+        <input type="text" id="add-deathdate" placeholder="Death Date"> 
+        <input type="text" id="add-deathplace" placeholder="Death Place"> 
+        <input type="text" id="add-causeofdeath" placeholder="Cause of Death">
+        <input type="text" id="add-deathannotation" placeholder="Source">  
+        <br>
+        <input type="submit" value="Add">
+    </form>
+    <br>
+    <div id="editForm" class="hello">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateItem()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-name">
+            <input type="text" id="edit-dob">
+            <input type="text" id="edit-birthplace">
+            <input type="text" id="edit-birthannotation">
+            <input type="text" id="edit-deathdate">
+            <input type="text" id="edit-deathplace">
+            <input type="text" id="edit-causeofdeath">
+            <input type="text" id="edit-deathannotation">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"> </p>
+    <input type="text" id="searchTerm" onsubmit="searchItems()" placeholder="Search Profiles" title="Search Profiles">
+      <br>
+      <br>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Birth Date</th>
+            <th>Place of Birth</th>
+            <th>Birth Source</th>
+            <th>Death Date</th>
+            <th>Place of Death</th>
+            <th>Cause of Death</th>
+            <th>Death Source</th>
+            <th>Edit Profile</th>
+            <th>Delete Profile</th>
+        </tr>
+        <tbody id="todos"></tbody>
+    </table>
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItems();
+    </script>
+    <script type="text/javascript">
+        searchItems(searchTerm);
+    </script>
+<br>
+<footer id="final">Powered by Lazzarella Media Co. 2022 </footer>
+</body>
+
+</html>

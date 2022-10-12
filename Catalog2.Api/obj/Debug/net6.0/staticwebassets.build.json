@@ -1,11 +1,71 @@
 {
   "Version": 1,
-  "Hash": "gIKoJ5muLyjISTX8a9EI/cbG1CfYr77xbMbowNcnxv4=",
+  "Hash": "5LoKxcGc9Yk17qEVbidKat8OUVC5J6T5cJIuPKf4x7s=",
   "Source": "Catalog2.Api",
   "BasePath": "_content/Catalog2.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Catalog2.Api\\wwwroot",
+      "Source": "Catalog2.Api",
+      "ContentRoot": "C:\\Catalog2\\Catalog2.Api\\wwwroot\\",
+      "BasePath": "_content/Catalog2.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Catalog2\\Catalog2.Api\\wwwroot\\css\\site.css",
+      "SourceId": "Catalog2.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Catalog2\\Catalog2.Api\\wwwroot\\",
+      "BasePath": "_content/Catalog2.Api",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Catalog2\\Catalog2.Api\\wwwroot\\index.html",
+      "SourceId": "Catalog2.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Catalog2\\Catalog2.Api\\wwwroot\\",
+      "BasePath": "_content/Catalog2.Api",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Catalog2\\Catalog2.Api\\wwwroot\\js\\site.js",
+      "SourceId": "Catalog2.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Catalog2\\Catalog2.Api\\wwwroot\\",
+      "BasePath": "_content/Catalog2.Api",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ]
 }

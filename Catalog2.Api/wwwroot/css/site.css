@@ -1,0 +1,76 @@
+
+input[type='submit'], button, [aria-label] {
+    cursor: pointer;
+}
+
+#editForm {
+    font-family: Century;
+    display: none;
+}
+
+body{
+    background-color: beige;
+    font-family: Century;
+}
+
+#final{
+    text-align: center;
+    font-size: small ;
+}
+
+h1{
+    font-family: Century;
+    text-align: center;
+    padding: 5px;
+}
+
+#searchTerm{
+    width: 300px;
+    border: 2.5px solid brown;
+    padding: 10px;
+    border-radius: 30px;
+}
+table {
+    font-family: Arial, sans-serif;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #00c55279;
+    padding: 5px;
+}
+
+td {
+    border: 1px solid;
+    padding: 5px;
+}
+
+
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin-left: 425px;
+}
+.Containers {
+  display: none;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}

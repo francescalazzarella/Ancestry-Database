@@ -44,3 +44,4 @@ C:\Catalog2\Catalog2.Api\obj\Debug\net6.0\refint\Catalog2.Api.dll
 C:\Catalog2\Catalog2.Api\obj\Debug\net6.0\Catalog2.Api.pdb
 C:\Catalog2\Catalog2.Api\obj\Debug\net6.0\Catalog2.Api.genruntimeconfig.cache
 C:\Catalog2\Catalog2.Api\obj\Debug\net6.0\ref\Catalog2.Api.dll
+C:\Catalog2\Catalog2.Api\bin\Debug\net6.0\Catalog2.Api.staticwebassets.runtime.json
