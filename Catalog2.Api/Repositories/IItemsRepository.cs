@@ -14,5 +14,6 @@ namespace Catalog2.Api.Repositories
         Task UpdateItemAsync(Item item);
 
         Task DeleteItemAsync(Guid id);
+
     }
 }

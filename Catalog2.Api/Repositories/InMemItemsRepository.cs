@@ -82,5 +82,6 @@ namespace Catalog2.Api.Repositories
             items.RemoveAt(index);
             await Task.CompletedTask;
         }
+
     }
 }

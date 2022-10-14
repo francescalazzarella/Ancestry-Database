@@ -110,7 +110,8 @@ namespace Catalog2.Api.Controllers
            await repository.DeleteItemAsync(id);
             return NoContent();
         }
-    
+
+     
     }
 
 }

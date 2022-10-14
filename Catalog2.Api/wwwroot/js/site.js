@@ -2,17 +2,18 @@ const uri = 'items';
 let todos = [];
 
 function searchItems(searchTerm)
-{
-  let matchingSearches = [];
-		searchTerm = searchTerm.toLowerCase;
-		for(let i=0; i < this.todos.length; i++) {
-			let name = this.data[i].name.toLowerCase();
-			if (name.indexOf(searchTerm) >= 0) {
-				matchingSearches.push(this.data[i]);
-			}
-		}
-		this.todos = matchingSearches;
-}
+  {
+    let matchingSearches = [];
+      searchTerm = searchTerm.toLowerCase;
+      for(let i=0; i < this.todos.length; i++) {
+        let name = this.todos[i].name.toLowerCase();
+        if (name.indexOf(searchTerm) >= 0) {
+          matchingSearches.push(this.todos[i]);
+        }
+        todos = matchingSearches;
+      }
+      return matchingSearches;
+  }
 
 function getItems() {
 
@@ -224,7 +225,6 @@ function _displayItems(data) {
   
 }
 
-
 var slidePosition = 0;
 SlideShow();
 
@@ -239,14 +239,3 @@ function SlideShow() {
   slides[slidePosition-1].style.display = "block";
   setTimeout(SlideShow, 5000);
 } 
-
-//---------------------------------------------------------------Search Function//
-/*function searchItems(searchTerm) {
-  let searchTerm = document.getElementById("searchTerm");
-  let filter = searchTerm.value.toUpperCase();
-  let todos = document.getElementById("todos");
-  for (i = 0; i < todos.length; i++) {
-      if (searchTerm == todos[i].toUpperCase){
-        return todos[i]
-      }
-  }} */

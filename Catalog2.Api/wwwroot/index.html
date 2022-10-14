@@ -4,37 +4,105 @@
     <meta charset="UTF-8">
     <title>Ancestry Database</title>
     <link rel="stylesheet" href="css/site.css" />
+    <link rel="icon" type="image/png" href="https://th.bing.com/th/id/R.f8815fcaf79acabb497835fe835d7624?rik=%2fXkAtBDLLz0joQ&pid=ImgRaw&r=0">
 </head>
     <div id ="navbar" class="navbar">
+        <h4>Ancestry Database <img src="https://th.bing.com/th/id/R.f8815fcaf79acabb497835fe835d7624?rik=%2fXkAtBDLLz0joQ&pid=ImgRaw&r=0" width="20px" height="auto"></h4>
     <style>.navbar{
+        display: flex;
+        justify-content:space-around;
         width: 100%;
         font-family: Century;
         font-weight: bold;
-        background-color: rgba(160, 95, 11, 0.616);
-        padding: 15px;
-        float: inline-end;
+        background-color:  rgb(177, 136, 82) ;
+        padding: 2px;
+        align-items: center;  
+        overflow: hidden; 
+        z-index: 99;
+      }
+      .navbar a{
+        background-color:  rgb(177, 136, 82) ;
+        padding: 5px;
+        border: 2px black;
+        border-radius: 3px;
+      }
+      .navbar a:hover{
+        background-color: rgb(180, 153, 117);
+        padding: 5px;
+        color: black;
+      }
+      h4{
+        font-size: 20px;
+      }
+      .sticky {
+       position: fixed;
+       top: 0;
+       width: 100%;
+       z-index: 99;
       }
       </style>
-    <a class="active" href="home"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a href="items"><i class="fa fa-fw fa-profiles"></i> All Profiles</a>
+      <script>
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+          function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+                   }
+            }
+      </script>
+    <a href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="profiles"><i class="fa fa-fw fa-profiles"></i> Add Profiles</a>
     <a href="#"><i class="fa fa-fw fa-search"></i> Search Profiles</a>
+    <a><input type="text" id="searchTerm" onsubmit="searchItems()" placeholder="Search Site" title="Search Profiles">
+      <input type="submit" value="Search"></a>
     </div>
 <body>
-    <h1>Ancestry Database <img src="https://th.bing.com/th/id/R.f8815fcaf79acabb497835fe835d7624?rik=%2fXkAtBDLLz0joQ&pid=ImgRaw&r=0" width="40px" height="auto"></h1>
-<div class="slideshow-container fade">
-
-    <div class="Containers">
-      <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/277356646_387875450006794_4640110630008392245_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=zfIlSsWIMUgAX-9r6Dx&_nc_ht=scontent-ord5-1.xx&oh=00_AT-Viw45YFdl4_WZOqqCtsHTOY_TKGKeJLBbbTYAqQJoRw&oe=634BED22" width="500px" height="auto">
-    </div>
-    <div class="Containers">
-      <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t1.6435-9/36352718_1995044037232485_1041754732940492800_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=nP2sLhRCg_IAX8CvAK9&_nc_ht=scontent-ord5-1.xx&oh=00_AT-2K_WIbnRE9L_lcFvyqqhAzk_MaGkYDH_lsfAhUa3h2A&oe=636C5A6E" width="500px" height="auto">
-    </div>
-    <div class="Containers">
-      <img src="https://th.bing.com/th/id/OIP.mCHkFn6uBmUEiKfLAv_-3QHaFD?pid=ImgDet&rs=1" width="500px" height="auto">
-    </div>
-</div>
-    
-    <h3>Add Ancestor Profile</h3> 
+  <br>
+  <div class="row">
+    <style>
+      .row::after{
+        content: "";
+        clear: both;
+        display: table;
+      }
+    </style>
+      <div class="column">
+        <div class="slideshow-container fade">
+           <div class="Containers">
+               <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/277356646_387875450006794_4640110630008392245_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=zfIlSsWIMUgAX-9r6Dx&_nc_ht=scontent-ord5-1.xx&oh=00_AT-Viw45YFdl4_WZOqqCtsHTOY_TKGKeJLBbbTYAqQJoRw&oe=634BED22" width="500px" height="350">
+           </div>
+           <div class="Containers">
+               <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t1.6435-9/36352718_1995044037232485_1041754732940492800_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=nP2sLhRCg_IAX8CvAK9&_nc_ht=scontent-ord5-1.xx&oh=00_AT-2K_WIbnRE9L_lcFvyqqhAzk_MaGkYDH_lsfAhUa3h2A&oe=636C5A6E" width="500px" height="350">
+           </div>
+           <div class="Containers">
+               <img src="https://th.bing.com/th/id/OIP.mCHkFn6uBmUEiKfLAv_-3QHaFD?pid=ImgDet&rs=1" width="500px" height="350">
+           </div>
+        </div>
+        <style>
+          .slideshow-container{
+            margin-left: 170px;
+          }
+        </style>
+      </div>
+      <div class="column">
+        <img src="Ancestry Database.jpg" width="500px" height="350">
+      </div>
+      <style>
+        .column{
+          float: left;
+          width: 50%;
+          padding: 0px;
+        }
+        
+      </style>
+  </div>
+  <br>
+  <br>
+  <button class="accordion">Add Ancestor Profile</button>
+  <div class="panel">
     <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
         <input type="text" id="add-name" placeholder="First and Last Name">
         <input type="text" id="add-dob" placeholder="Birth Date">
@@ -48,6 +116,47 @@
         <br>
         <input type="submit" value="Add">
     </form>
+    </div>
+    <style>
+      .accordion {
+        font-family: century black;
+        font-weight: bold;
+        background-color: rgb(184, 149, 74);
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        padding: 10px;
+        text-align: left;
+        border: 2.5px solid rgba(184, 149, 74, 0.753);
+        border-radius: 20px;
+        transition: 0.4s;
+      }
+      .active, .accordion:hover {
+        background-color: rgb(192, 170, 123);
+      }
+      .panel {
+      padding: 18px;
+      background-color: beige;
+      display: none;
+      overflow: hidden;
+      }
+    </style>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+    </script>
+
     <br>
     <div id="editForm" class="hello">
         <h3>Edit</h3>
@@ -67,9 +176,7 @@
     </div>
 
     <p id="counter"> </p>
-    <input type="text" id="searchTerm" onsubmit="searchItems()" placeholder="Search Profiles" title="Search Profiles">
-      <br>
-      <br>
+    <br>
     <table>
         <tr>
             <th>Name</th>
@@ -89,9 +196,7 @@
     <script src="js/site.js" asp-append-version="true"></script>
     <script type="text/javascript">
         getItems();
-    </script>
-    <script type="text/javascript">
-        searchItems(searchTerm);
+        searchItems();
     </script>
 <br>
 <footer id="final">Powered by Lazzarella Media Co. 2022 </footer>
